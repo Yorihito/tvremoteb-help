@@ -99,8 +99,8 @@
   <a href="#setup"><svg class="ic-svg"><use href="#ic-connect"/></svg>Connecting &amp; pairing</a>
   <a href="#header"><svg class="ic-svg"><use href="#ic-power"/></svg>Shared header</a>
   <a href="#remote"><svg class="ic-svg"><use href="#ic-remote"/></svg>Remote screen</a>
-  <a href="#keypad"><svg class="ic-svg"><use href="#ic-keypad"/></svg>Keypad screen</a>
   <a href="#media"><svg class="ic-svg"><use href="#ic-dial"/></svg>Media screen</a>
+  <a href="#keypad"><svg class="ic-svg"><use href="#ic-keypad"/></svg>Keypad screen</a>
   <a href="#apps"><svg class="ic-svg"><use href="#ic-apps"/></svg>Apps screen</a>
   <a href="#settings"><svg class="ic-svg"><use href="#ic-gear"/></svg>Settings screen</a>
   <a href="#trouble"><svg class="ic-svg"><use href="#ic-help"/></svg>Troubleshooting</a>
@@ -171,10 +171,42 @@
       <tr><td>Vertical wheel</td><td>The tall pad to the right of the D-pad. Drag up/down to send a stream of “up”/“down” presses — fast, comfortable scrolling through long lists.</td></tr>
       <tr><td>Volume (+/−/mute)</td><td>Volume up/down and mute (the small middle button).</td></tr>
       <tr><td>ch (+/−/display)</td><td>Channel up/down. The small middle button is the on-screen display (program info).</td></tr>
-      <tr><td>Blue / Red / Green / Yellow</td><td>The four colour keys used by data broadcasting.</td></tr>
+      <tr><td>Blue / Red / Green / Yellow</td><td>The four color keys used by data broadcasting.</td></tr>
       <tr><td>Guide / Recordings / Back</td><td>Program guide (EPG), the recordings list, and go back one step.</td></tr>
     </table>
   </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="media">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-dial"/></svg>Media screen (jog / shuttle)</h2>
+
+  <h3>Layout</h3>
+  <div class="card">
+    <ul>
+      <li><b>Playback info card (top)</b> — shows the current title and source when the TV/app provides playback information. Tap it to refresh. Apps that do not expose playback information show “No playback info.”</li>
+      <li><b>Mode switch</b> — <span class="btn cyan">Jog (frame)</span> and <span class="btn cyan">Shuttle (variable)</span>.</li>
+      <li><b>Jog dial</b> — drag your finger around the rim to turn it.</li>
+      <li><b>Round button in the dial’s center</b> — sends “OK / confirm.” It depresses with a click.</li>
+      <li><b>Vertical wheel (right) and horizontal wheel (below)</b> — move the cursor up/down/left/right. Together with the dial they act like a D-pad.</li>
+      <li><b>Back button</b> — next to the horizontal wheel.</li>
+      <li><b>Transport row (bottom)</b> — Prev / Rewind / Play / Pause / Forward / Next.</li>
+    </ul>
+  </div>
+
+  <h3>Jog mode (small-step seeking)</h3>
+  <div class="card">
+    <p>Turning the dial repeatedly nudges the video forward or back a little at a time. Clockwise goes forward, counter-clockwise goes back. Great for rewinding a scene you missed by just a touch.</p>
+    <p class="dim">The rotation needed per nudge is adjustable with <a href="#settings-jog">“Frame-step sensitivity” in Settings</a>.</p>
+  </div>
+
+  <h3>Shuttle mode (variable speed)</h3>
+  <div class="card">
+    <p>How far you twist the dial sets the fast-forward / rewind <b>speed tier</b> — the further you twist, the faster, with the center readout (e.g. ≫ ×2) showing the current speed. <b>Release and the dial springs back to center and returns to normal playback.</b></p>
+    <p class="dim">The angle per tier is adjustable with <a href="#settings-jog">“Shuttle sensitivity” in Settings</a>.</p>
+  </div>
+
+  <div class="note">There’s no “smooth seek” command on the TV, so Jog/Shuttle is approximated by sending a stream of remote-button presses. How fine and responsive it feels varies by TV model and the app/content (a recording vs. streaming, etc.). It works best with recorded shows.</div>
 </section>
 
 <!-- ============================================================ -->
@@ -189,37 +221,6 @@
       <li><b>Utility buttons</b> — Data (the “d” button) / Subtitle / Audio / Display / Help / Stop / REC (record) / Recorder / Quick settings.</li>
     </ul>
   </div>
-</section>
-
-<!-- ============================================================ -->
-<section id="media">
-  <h2><svg class="ic-svg ic-h2"><use href="#ic-dial"/></svg>Media screen (jog / shuttle)</h2>
-
-  <h3>Layout</h3>
-  <div class="card">
-    <ul>
-      <li><b>Mode switch</b> — <span class="btn cyan">Jog (frame)</span> and <span class="btn cyan">Shuttle (variable)</span>.</li>
-      <li><b>Jog dial</b> — drag your finger around the rim to turn it.</li>
-      <li><b>Round button in the dial’s centre</b> — sends “OK / confirm.” It depresses with a click.</li>
-      <li><b>Vertical wheel (right) and horizontal wheel (below)</b> — move the cursor up/down/left/right. Together with the dial they act like a D-pad.</li>
-      <li><b>Back button</b> — next to the horizontal wheel.</li>
-      <li><b>Transport row (bottom)</b> — Prev / Rewind / Play / Pause / Forward / Next.</li>
-    </ul>
-  </div>
-
-  <h3>Jog mode (frame stepping)</h3>
-  <div class="card">
-    <p>Turning the dial repeatedly nudges the video “forward / back” a little at a time. Clockwise goes forward, counter-clockwise goes back. Great for rewinding a scene you missed by just a touch.</p>
-    <p class="dim">The rotation needed per step is adjustable with <a href="#settings-jog">“Frame-step sensitivity” in Settings</a>.</p>
-  </div>
-
-  <h3>Shuttle mode (variable speed)</h3>
-  <div class="card">
-    <p>How far you twist the dial sets the fast-forward / rewind <b>speed tier</b> — the further you twist, the faster, with the centre readout (e.g. ≫ ×2) showing the current speed. <b>Release and the dial springs back to centre and returns to normal playback.</b></p>
-    <p class="dim">The angle per tier is adjustable with <a href="#settings-jog">“Shuttle sensitivity” in Settings</a>.</p>
-  </div>
-
-  <div class="note">There’s no “smooth seek” command on the TV, so Jog/Shuttle is approximated by sending a stream of remote-button presses. How fine and responsive it feels varies by TV model and the app/content (a recording vs. streaming, etc.). It works best with recorded shows.</div>
 </section>
 
 <!-- ============================================================ -->
@@ -240,7 +241,7 @@
 
   <h3>User guide</h3>
   <div class="card">
-    <p>At the very top of Settings is a link that opens this user guide in your browser. It opens this English version when the app is set to English, and the Japanese version otherwise.</p>
+    <p>At the very top of Settings is a link that opens this user guide in your browser. It opens this English version when the app language is English, the Japanese version when it is Japanese, and follows the iPhone’s preferred language when set to System.</p>
   </div>
 
   <h3>Language</h3>
@@ -293,7 +294,7 @@
       <tr><td>Frame-step sensitivity</td><td>The rotation needed to step once in Jog mode. <b>Smaller is more sensitive</b> (a small turn steps), larger is more deliberate.</td></tr>
       <tr><td>Shuttle sensitivity</td><td>The angle needed to raise the speed one tier in Shuttle mode. Smaller means a small twist speeds up more.</td></tr>
     </table>
-    <p class="dim">Frame-step accuracy varies by TV model and content. Find what feels good in your setup.</p>
+    <p class="dim">Jog step accuracy varies by TV model and content. Find what feels good in your setup.</p>
   </div>
 
   <h3>Switch / reset / unpair</h3>
@@ -322,7 +323,8 @@
       <tr><td>Connection errors</td><td>Confirm “IP control” is enabled on the TV. Restarting the TV (unplug/replug) can also help.</td></tr>
       <tr><td>Won’t power on from standby</td><td>Enable “Remote start” on the TV. Some Wi-Fi router settings can block the wake packet.</td></tr>
       <tr><td>Some buttons don’t work</td><td>Remote commands vary by TV model and firmware. A few actions (such as slow playback) aren’t supported on some models.</td></tr>
-      <tr><td>“Back” needs two presses</td><td>In apps like YouTube, the first “Back” during playback only hides the on-screen controls. Press it again (that’s the TV app’s behaviour).</td></tr>
+      <tr><td>“Back” needs two presses</td><td>In apps like YouTube, the first “Back” during playback only hides the on-screen controls. Press it again (that’s the TV app’s behavior).</td></tr>
+      <tr><td>No playback info appears</td><td>Some apps do not provide playback information. Seeing “No playback info” does not mean the app or TV connection is broken.</td></tr>
       <tr><td>Volume presets don’t apply</td><td>Check the preset isn’t left as “Not set.” If the app launches slowly, increase “Delay before applying.”</td></tr>
     </table>
   </div>
