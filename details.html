@@ -11,6 +11,65 @@
 </head>
 <body>
 
+<!-- Icon sprite — line icons matching the app's SF Symbols (tab bar + buttons). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- tv.badge.wifi — 接続とペアリング -->
+    <symbol id="ic-connect" viewBox="0 0 24 24">
+      <path d="M6.5 8.2Q12 3.6 17.5 8.2"/>
+      <path d="M9 10.4Q12 7.4 15 10.4"/>
+      <circle cx="12" cy="12.3" r="0.7" fill="currentColor" stroke="none"/>
+      <rect x="4" y="13.5" width="16" height="6.4" rx="1.8"/>
+      <line x1="12" y1="19.9" x2="12" y2="21.5"/>
+      <line x1="8.5" y1="21.5" x2="15.5" y2="21.5"/>
+    </symbol>
+    <!-- power — 共通ヘッダー（電源） -->
+    <symbol id="ic-power" viewBox="0 0 24 24">
+      <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+      <line x1="12" y1="2.5" x2="12" y2="12.5"/>
+    </symbol>
+    <!-- av.remote — リモコン画面 -->
+    <symbol id="ic-remote" viewBox="0 0 24 24">
+      <rect x="7" y="2" width="10" height="20" rx="3"/>
+      <circle cx="12" cy="5.6" r="0.9" fill="currentColor" stroke="none"/>
+      <circle cx="12" cy="12" r="2.2"/>
+      <line x1="9.6" y1="18.4" x2="14.4" y2="18.4"/>
+    </symbol>
+    <!-- square.grid.3x3 — 数字画面 -->
+    <symbol id="ic-keypad" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/>
+      <line x1="9.17" y1="3.5" x2="9.17" y2="20.5"/>
+      <line x1="14.83" y1="3.5" x2="14.83" y2="20.5"/>
+      <line x1="3.5" y1="9.17" x2="20.5" y2="9.17"/>
+      <line x1="3.5" y1="14.83" x2="20.5" y2="14.83"/>
+    </symbol>
+    <!-- dial.medium — メディア画面 -->
+    <symbol id="ic-dial" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8.5"/>
+      <line x1="12" y1="11" x2="12" y2="6.5"/>
+      <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/>
+    </symbol>
+    <!-- square.grid.2x2 — アプリ画面 -->
+    <symbol id="ic-apps" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/>
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/>
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/>
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/>
+    </symbol>
+    <!-- gearshape — 設定画面 -->
+    <symbol id="ic-gear" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </symbol>
+    <!-- questionmark.circle — 困ったときは -->
+    <symbol id="ic-help" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M9.3 9.3a2.8 2.8 0 0 1 5.4 1c0 1.8-2.7 2.2-2.7 4"/>
+      <circle cx="12" cy="17.2" r="0.7" fill="currentColor" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
 <header class="site">
   <img class="app-icon" src="app-icon.png" alt="TV REMOTE for B アイコン" width="80" height="80">
   <h1>TV REMOTE for B</h1>
@@ -24,19 +83,19 @@
 <main>
 
 <div class="toc">
-  <a href="#setup"><span class="ico">🔌</span>接続とペアリング</a>
-  <a href="#header"><span class="ico">⏻</span>共通ヘッダー</a>
-  <a href="#remote"><span class="ico">🎛️</span>リモコン画面</a>
-  <a href="#keypad"><span class="ico">🔢</span>数字画面</a>
-  <a href="#media"><span class="ico">🎬</span>メディア画面</a>
-  <a href="#apps"><span class="ico">📱</span>アプリ画面</a>
-  <a href="#settings"><span class="ico">⚙️</span>設定画面</a>
-  <a href="#trouble"><span class="ico">🛟</span>困ったときは</a>
+  <a href="#setup"><svg class="ic-svg"><use href="#ic-connect"/></svg>接続とペアリング</a>
+  <a href="#header"><svg class="ic-svg"><use href="#ic-power"/></svg>共通ヘッダー</a>
+  <a href="#remote"><svg class="ic-svg"><use href="#ic-remote"/></svg>リモコン画面</a>
+  <a href="#keypad"><svg class="ic-svg"><use href="#ic-keypad"/></svg>数字画面</a>
+  <a href="#media"><svg class="ic-svg"><use href="#ic-dial"/></svg>メディア画面</a>
+  <a href="#apps"><svg class="ic-svg"><use href="#ic-apps"/></svg>アプリ画面</a>
+  <a href="#settings"><svg class="ic-svg"><use href="#ic-gear"/></svg>設定画面</a>
+  <a href="#trouble"><svg class="ic-svg"><use href="#ic-help"/></svg>困ったときは</a>
 </div>
 
 <!-- ============================================================ -->
 <section id="setup">
-  <h2>🔌 接続とペアリング</h2>
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-connect"/></svg>接続とペアリング</h2>
 
   <h3>テレビ側の準備（最初に 1 回だけ）</h3>
   <div class="card">
@@ -50,7 +109,7 @@
 
   <h3>接続画面（テレビを選ぶ）</h3>
   <div class="card">
-    <p>初回起動時、またはヘッダー左上の <span class="btn">📺</span> ボタンを押すと開きます。</p>
+    <p>初回起動時、またはヘッダー左上の <svg class="ic-svg ic-inline"><use href="#ic-connect"/></svg> ボタンを押すと開きます。</p>
     <ul>
       <li><b>接続先のテレビ</b> — 登録済みのテレビの一覧。タップで接続します。左にスワイプすると削除できます。</li>
       <li><b>ネットワーク上で見つかったテレビ</b> — 同じ Wi-Fi 上の BRAVIA（Google TV）を自動検出して表示します。タップすると登録＆接続します。</li>
@@ -72,13 +131,13 @@
 
 <!-- ============================================================ -->
 <section id="header">
-  <h2>⏻ 共通ヘッダー（全画面の上部）</h2>
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-power"/></svg>共通ヘッダー（全画面の上部）</h2>
   <div class="card">
     <table>
       <tr><th>場所</th><th>機能</th></tr>
-      <tr><td>左の 📺 ボタン</td><td>接続画面を開きます（テレビの切り替え・追加）。</td></tr>
+      <tr><td>左の <svg class="ic-svg ic-inline"><use href="#ic-connect"/></svg> ボタン</td><td>接続画面を開きます（テレビの切り替え・追加）。</td></tr>
       <tr><td>中央</td><td>接続中のテレビ名と状態バッジ：<span class="badge on">オン</span> <span class="badge standby">スタンバイ</span> <span class="badge off">未接続</span>。</td></tr>
-      <tr><td>右の ⏻ ボタン</td><td>電源トグル。テレビがオンのとき（アイコンが緑に光る）に押すとスタンバイへ、スタンバイ中に押すと電源オン。</td></tr>
+      <tr><td>右の <svg class="ic-svg ic-inline"><use href="#ic-power"/></svg> ボタン</td><td>電源トグル。テレビがオンのとき（アイコンが緑に光る）に押すとスタンバイへ、スタンバイ中に押すと電源オン。</td></tr>
     </table>
     <p class="dim">エラーが起きるとヘッダーの下にバナーが出ます。赤は「接続エラー」（テレビに届かない・再試行ボタンあり）、オレンジは「操作エラー」（接続はできているがそのボタンが失敗）です。✕ で閉じられます。</p>
     <div class="tip">テレビがスタンバイ中でも、YouTube ボタンや数字ボタンなどを押すとテレビは自動で起きます。アプリの状態表示も自動で「オン」に追従します。</div>
@@ -87,7 +146,7 @@
 
 <!-- ============================================================ -->
 <section id="remote">
-  <h2>🎛️ リモコン画面</h2>
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-remote"/></svg>リモコン画面</h2>
   <div class="card">
     <p>ふだんのテレビ操作をまとめたメイン画面です。</p>
     <table>
@@ -107,7 +166,7 @@
 
 <!-- ============================================================ -->
 <section id="keypad">
-  <h2>🔢 数字画面</h2>
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-keypad"/></svg>数字画面</h2>
   <div class="card">
     <p>チャンネルの直接選局と、メイン画面に載せていない補助ボタンの画面です。</p>
     <ul>
@@ -121,7 +180,7 @@
 
 <!-- ============================================================ -->
 <section id="media">
-  <h2>🎬 メディア画面（ジョグ／シャトル）</h2>
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-dial"/></svg>メディア画面（ジョグ／シャトル）</h2>
 
   <h3>画面の構成</h3>
   <div class="card">
@@ -153,7 +212,7 @@
 
 <!-- ============================================================ -->
 <section id="apps">
-  <h2>📱 アプリ画面</h2>
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-apps"/></svg>アプリ画面</h2>
   <div class="card">
     <p>テレビにインストールされているアプリの一覧を表示し、タップで起動します。起動すると自動でリモコン画面に切り替わるので、そのままカーソル操作を続けられます。</p>
     <ul>
@@ -165,7 +224,7 @@
 
 <!-- ============================================================ -->
 <section id="settings">
-  <h2>⚙️ 設定画面</h2>
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-gear"/></svg>設定画面</h2>
 
   <h3>言語</h3>
   <div class="card">
@@ -238,7 +297,7 @@
 
 <!-- ============================================================ -->
 <section id="trouble">
-  <h2>🛟 困ったときは</h2>
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-help"/></svg>困ったときは</h2>
   <div class="card">
     <table>
       <tr><th>症状</th><th>確認すること</th></tr>

@@ -271,7 +271,9 @@ footer {
   margin-bottom: 36px;
 }
 .toc a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 9px;
   padding: 10px 14px;
   border-radius: 12px;
   background: var(--card);
@@ -286,7 +288,28 @@ footer {
   border-color: var(--cyan-dim);
   box-shadow: 0 0 12px rgba(70, 212, 232, 0.18);
 }
-.toc a .ico { margin-right: 8px; }
+
+/* Line icons matching the app's SF Symbols (drawn in the #sprite svg). */
+.ic-svg {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: var(--cyan);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+h2 .ic-svg.ic-h2 {
+  vertical-align: -4px;
+  margin-right: 9px;
+}
+.ic-svg.ic-inline {
+  width: 17px;
+  height: 17px;
+  vertical-align: -3px;
+}
 
 @media (max-width: 520px) {
   header.site { padding-top: 32px; }
