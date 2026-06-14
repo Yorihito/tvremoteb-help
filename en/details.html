@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TV REMOTE for B — Full Manual</title>
+<meta name="description" content="Full manual for TV REMOTE for B, an iPhone remote for Sony BRAVIA (Google TV) televisions.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" type="image/png" href="../app-icon.png">
+<link rel="apple-touch-icon" href="../app-icon.png">
+</head>
+<body>
+
+<!-- Icon sprite — line icons matching the app's SF Symbols (tab bar + buttons). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- tv.badge.wifi — Connecting -->
+    <symbol id="ic-connect" viewBox="0 0 24 24">
+      <rect x="2.5" y="3.5" width="15" height="11" rx="2"/>
+      <line x1="10" y1="14.5" x2="10" y2="17.6"/>
+      <line x1="6.5" y1="17.6" x2="13.5" y2="17.6"/>
+      <path d="M15.2 16.6q3-2.4 6 0"/>
+      <path d="M16.6 18.7q1.6-1.3 3.2 0"/>
+      <circle cx="18.2" cy="20.4" r="0.7" fill="currentColor" stroke="none"/>
+    </symbol>
+    <!-- power — Shared header -->
+    <symbol id="ic-power" viewBox="0 0 24 24">
+      <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+      <line x1="12" y1="2.5" x2="12" y2="12.5"/>
+    </symbol>
+    <!-- av.remote — Remote screen -->
+    <symbol id="ic-remote" viewBox="0 0 24 24">
+      <rect x="7" y="2" width="10" height="20" rx="3"/>
+      <circle cx="12" cy="5.6" r="0.9" fill="currentColor" stroke="none"/>
+      <circle cx="12" cy="12" r="2.2"/>
+      <line x1="9.6" y1="18.4" x2="14.4" y2="18.4"/>
+    </symbol>
+    <!-- square.grid.3x3 — Keypad screen -->
+    <symbol id="ic-keypad" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/>
+      <line x1="9.17" y1="3.5" x2="9.17" y2="20.5"/>
+      <line x1="14.83" y1="3.5" x2="14.83" y2="20.5"/>
+      <line x1="3.5" y1="9.17" x2="20.5" y2="9.17"/>
+      <line x1="3.5" y1="14.83" x2="20.5" y2="14.83"/>
+    </symbol>
+    <!-- dial.medium — Media screen -->
+    <symbol id="ic-dial" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="6.1"/>
+      <line x1="12" y1="11" x2="12" y2="7.7"/>
+      <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/>
+      <g fill="currentColor" stroke="none">
+        <circle cx="12" cy="2.7" r="0.75"/>
+        <circle cx="18.57" cy="5.43" r="0.75"/>
+        <circle cx="21.3" cy="12" r="0.75"/>
+        <circle cx="18.57" cy="18.57" r="0.75"/>
+        <circle cx="12" cy="21.3" r="0.75"/>
+        <circle cx="5.43" cy="18.57" r="0.75"/>
+        <circle cx="2.7" cy="12" r="0.75"/>
+        <circle cx="5.43" cy="5.43" r="0.75"/>
+      </g>
+    </symbol>
+    <!-- square.grid.2x2 — Apps screen -->
+    <symbol id="ic-apps" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/>
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/>
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/>
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/>
+    </symbol>
+    <!-- gearshape — Settings screen -->
+    <symbol id="ic-gear" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </symbol>
+    <!-- questionmark.circle — Troubleshooting -->
+    <symbol id="ic-help" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M9.3 9.3a2.8 2.8 0 0 1 5.4 1c0 1.8-2.7 2.2-2.7 4"/>
+      <circle cx="12" cy="17.2" r="0.7" fill="currentColor" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site">
+  <img class="app-icon" src="../app-icon.png" alt="TV REMOTE for B icon" width="80" height="80">
+  <h1>TV REMOTE for B</h1>
+  <p class="tagline">Full Manual — every screen and setting explained</p>
+  <nav class="tabs">
+    <a href="index.html">Quick Start</a>
+    <a href="details.html" class="active">Full Manual</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="../details.html">日本語</a><span>·</span><a href="details.html" class="active">English</a>
+  </div>
+</header>
+
+<main>
+
+<div class="toc">
+  <a href="#setup"><svg class="ic-svg"><use href="#ic-connect"/></svg>Connecting &amp; pairing</a>
+  <a href="#header"><svg class="ic-svg"><use href="#ic-power"/></svg>Shared header</a>
+  <a href="#remote"><svg class="ic-svg"><use href="#ic-remote"/></svg>Remote screen</a>
+  <a href="#keypad"><svg class="ic-svg"><use href="#ic-keypad"/></svg>Keypad screen</a>
+  <a href="#media"><svg class="ic-svg"><use href="#ic-dial"/></svg>Media screen</a>
+  <a href="#apps"><svg class="ic-svg"><use href="#ic-apps"/></svg>Apps screen</a>
+  <a href="#settings"><svg class="ic-svg"><use href="#ic-gear"/></svg>Settings screen</a>
+  <a href="#trouble"><svg class="ic-svg"><use href="#ic-help"/></svg>Troubleshooting</a>
+</div>
+
+<!-- ============================================================ -->
+<section id="setup">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-connect"/></svg>Connecting &amp; pairing</h2>
+
+  <h3>Preparing the TV (one time only)</h3>
+  <div class="card">
+    <p>To control the TV from the app, enable these two things on the TV first (from the BRAVIA settings menu):</p>
+    <ul>
+      <li><b>IP control</b> — Settings → Network &amp; Internet → Home network setup → IP control → set authentication to <b>“Normal and Pre-Shared Key” or “Normal.”</b></li>
+      <li><b>Remote start</b> — also under Home network setup. With this on, the app can power the TV on even from standby.</li>
+    </ul>
+    <div class="note">Your iPhone and TV must be on the <b>same Wi-Fi network</b>. Networks that isolate devices from each other (such as guest Wi-Fi) won’t work.</div>
+  </div>
+
+  <h3>Connection screen (choosing a TV)</h3>
+  <div class="card">
+    <p>This opens on first launch, or when you tap the <svg class="ic-svg ic-inline"><use href="#ic-connect"/></svg> button at the top left of the header.</p>
+    <ul>
+      <li><b>TV to connect</b> — your list of saved TVs. Tap to connect; swipe left to delete.</li>
+      <li><b>TVs found on your network</b> — BRAVIA (Google TV) sets discovered automatically on the same Wi-Fi. Tap one to register and connect.</li>
+      <li><b>Add a TV manually</b> — if it isn’t found automatically, enter the IP address directly. The name is optional; the MAC address is used for power-on (Wake-on-LAN) but is fetched automatically after connecting, so you can usually leave it blank.</li>
+    </ul>
+    <div class="tip">You can find the TV’s IP address under Settings → Network &amp; Internet → Network status on the TV.</div>
+  </div>
+
+  <h3>PIN pairing</h3>
+  <div class="card">
+    <ol class="steps">
+      <li><b>Select a TV and connect; a 4-digit PIN appears on the TV screen.</b></li>
+      <li><b>Enter those 4 digits in the field on your iPhone.</b><br><span class="dim">While the field shows “Preparing…”, wait a moment.</span></li>
+      <li><b>Tap <span class="btn cyan">Pair</span>.</b><br><span class="dim">On success the credentials are stored securely on your iPhone (Keychain) and it reconnects automatically next time — no PIN needed.</span></li>
+    </ol>
+    <p class="dim">If pairing fails, an error is shown. If the PIN on the TV disappears, cancel and reconnect to get a fresh PIN.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="header">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-power"/></svg>Shared header (top of every screen)</h2>
+  <div class="card">
+    <table>
+      <tr><th>Where</th><th>What it does</th></tr>
+      <tr><td>Left <svg class="ic-svg ic-inline"><use href="#ic-connect"/></svg> button</td><td>Opens the connection screen (switch / add TVs).</td></tr>
+      <tr><td>Centre</td><td>The connected TV name and a state badge: <span class="badge on">On</span> <span class="badge standby">Standby</span> <span class="badge off">Not connected</span>.</td></tr>
+      <tr><td>Right <svg class="ic-svg ic-inline"><use href="#ic-power"/></svg> button</td><td>Power toggle. Press it while the TV is on (icon glows green) to go to standby, or while in standby to power on.</td></tr>
+    </table>
+    <p class="dim">When something goes wrong a banner appears below the header. Red is a “connection error” (the TV is unreachable, with a retry button); amber is a “command error” (still connected, but that button failed). Dismiss with ✕.</p>
+    <div class="tip">Even from standby, pressing YouTube, a number key, etc. wakes the TV. The app’s state indicator follows along to “On” automatically.</div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="remote">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-remote"/></svg>Remote screen</h2>
+  <div class="card">
+    <p>The main screen, gathering everyday TV controls.</p>
+    <table>
+      <tr><th>Button</th><th>Description</th></tr>
+      <tr><td>TV / Terrestrial / BS·CS / 4K</td><td>Switch the broadcast source / tuner. If you’ve set a volume preset for “TV broadcast,” the volume also adjusts automatically when you switch.</td></tr>
+      <tr><td>Home / Menu / Input</td><td>The Google TV home screen, the TV menu, and the external-input switcher.</td></tr>
+      <tr><td>Streaming buttons</td><td>One-tap launch of your chosen video apps (up to 3, <a href="#settings-streaming">configurable in Settings</a>). They launch even from standby.</td></tr>
+      <tr><td>D-pad + OK</td><td>Cursor movement and confirm. On Google TV, almost everything is done with these.</td></tr>
+      <tr><td>Vertical wheel</td><td>The tall pad to the right of the D-pad. Drag up/down to send a stream of “up”/“down” presses — fast, comfortable scrolling through long lists.</td></tr>
+      <tr><td>Volume (+/−/mute)</td><td>Volume up/down and mute (the small middle button).</td></tr>
+      <tr><td>ch (+/−/display)</td><td>Channel up/down. The small middle button is the on-screen display (program info).</td></tr>
+      <tr><td>Blue / Red / Green / Yellow</td><td>The four colour keys used by data broadcasting.</td></tr>
+      <tr><td>Guide / Recordings / Back</td><td>Program guide (EPG), the recordings list, and go back one step.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="keypad">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-keypad"/></svg>Keypad screen</h2>
+  <div class="card">
+    <p>For direct channel entry and the extra utility buttons that don’t fit on the main remote.</p>
+    <ul>
+      <li><b>Terrestrial / BS·CS / 4K</b> — tuner switches (here too, since they pair with number entry).</li>
+      <li><b>Number keys 1–12</b> — direct channel selection. “10” is the 0 key; 11 and 12 include sub-channel / tune labels.</li>
+      <li><b>· / 3-digit / Enter</b> — for entering 3-digit channel numbers.</li>
+      <li><b>Utility buttons</b> — Data (the “d” button) / Subtitle / Audio / Display / Help / Stop / REC (record) / Recorder / Quick settings.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="media">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-dial"/></svg>Media screen (jog / shuttle)</h2>
+
+  <h3>Layout</h3>
+  <div class="card">
+    <ul>
+      <li><b>Mode switch</b> — <span class="btn cyan">Jog (frame)</span> and <span class="btn cyan">Shuttle (variable)</span>.</li>
+      <li><b>Jog dial</b> — drag your finger around the rim to turn it.</li>
+      <li><b>Round button in the dial’s centre</b> — sends “OK / confirm.” It depresses with a click.</li>
+      <li><b>Vertical wheel (right) and horizontal wheel (below)</b> — move the cursor up/down/left/right. Together with the dial they act like a D-pad.</li>
+      <li><b>Back button</b> — next to the horizontal wheel.</li>
+      <li><b>Transport row (bottom)</b> — Prev / Rewind / Play / Pause / Forward / Next.</li>
+    </ul>
+  </div>
+
+  <h3>Jog mode (frame stepping)</h3>
+  <div class="card">
+    <p>Turning the dial repeatedly nudges the video “forward / back” a little at a time. Clockwise goes forward, counter-clockwise goes back. Great for rewinding a scene you missed by just a touch.</p>
+    <p class="dim">The rotation needed per step is adjustable with <a href="#settings-jog">“Frame-step sensitivity” in Settings</a>.</p>
+  </div>
+
+  <h3>Shuttle mode (variable speed)</h3>
+  <div class="card">
+    <p>How far you twist the dial sets the fast-forward / rewind <b>speed tier</b> — the further you twist, the faster, with the centre readout (e.g. ≫ ×2) showing the current speed. <b>Release and the dial springs back to centre and returns to normal playback.</b></p>
+    <p class="dim">The angle per tier is adjustable with <a href="#settings-jog">“Shuttle sensitivity” in Settings</a>.</p>
+  </div>
+
+  <div class="note">There’s no “smooth seek” command on the TV, so Jog/Shuttle is approximated by sending a stream of remote-button presses. How fine and responsive it feels varies by TV model and the app/content (a recording vs. streaming, etc.). It works best with recorded shows.</div>
+</section>
+
+<!-- ============================================================ -->
+<section id="apps">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-apps"/></svg>Apps screen</h2>
+  <div class="card">
+    <p>Lists the apps installed on the TV and launches one on tap. After launching, it switches to the Remote screen automatically so you can keep navigating.</p>
+    <ul>
+      <li>The list is fetched from the TV automatically. <b>Pull down to refresh.</b></li>
+      <li>For your most-used video apps, registering them as streaming buttons on the Remote screen launches them faster.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="settings">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-gear"/></svg>Settings screen</h2>
+
+  <h3>User guide</h3>
+  <div class="card">
+    <p>At the very top of Settings is a link that opens this user guide in your browser. It opens this English version when the app is set to English, and the Japanese version otherwise.</p>
+  </div>
+
+  <h3>Language</h3>
+  <div class="card">
+    <p>Choose the app’s display language: “System (match iPhone),” “Japanese,” or “English.” <b>Changes take effect after you restart the app</b> (swipe it up to quit, then reopen).</p>
+  </div>
+
+  <h3>Connected TV</h3>
+  <div class="card">
+    <p>Shows the name, IP address, and MAC address of the TV you’re connected to. The MAC address is used to power on from standby (Wake-on-LAN) and only appears when it could be fetched from the TV.</p>
+  </div>
+
+  <h3 id="settings-streaming">Remote streaming buttons</h3>
+  <div class="card">
+    <p>Choose which video-app buttons appear on the Remote screen — <b>up to 3</b> from hulu / NETFLIX / U-NEXT / prime video / ABEMA / Disney+ / YouTube / My BRAVIA. Tap to toggle each on/off (when 3 are selected, remove one to free a slot).</p>
+  </div>
+
+  <h3 id="settings-volume">Volume presets</h3>
+  <div class="card">
+    <p>This remembers a preferred volume per app or broadcast and applies it automatically when you switch — e.g. “volume 15 when YouTube opens, 30 when returning to TV.” It compensates for the fact that different apps have different baseline volumes on the TV.</p>
+
+    <p><b>Recommended steps:</b></p>
+    <ol class="steps">
+      <li><b>Turn on “Enable volume presets.”</b></li>
+      <li><b>Set the TV to your usual volume, then tap the “…” menu on each row → “Remember current volume.”</b><br>
+        <span class="dim">The volume currently set on the TV becomes the preset. You can also adjust the number directly with +/−.</span></li>
+      <li><b>Rows left as “Not set” don’t change the volume.</b><br>
+        <span class="dim">Use “…” → “Clear preset” to return a row to Not set anytime.</span></li>
+    </ol>
+
+    <p><b>Fine tuning (the defaults are usually fine):</b></p>
+    <table>
+      <tr><th>Item</th><th>Meaning</th></tr>
+      <tr><td>Delay before applying</td><td>How long after launching an app before the volume starts changing. If your TV launches apps slowly and the change misses before launch completes, make this longer.</td></tr>
+      <tr><td>Volume step interval</td><td>The gap between each ±1 step when changing volume. If the volume doesn’t reach the target or overshoots, a slightly longer interval is more reliable.</td></tr>
+      <tr><td>Delay before verifying</td><td>How long before the app checks that the target volume was actually reached. Normally no need to change.</td></tr>
+    </table>
+  </div>
+
+  <h3>Tab order</h3>
+  <div class="card">
+    <p>Reorder the bottom tabs (Remote, Keypad, Media, Apps, Settings). Tap “Edit” at the top right of the section, then drag the rows to reorder. Putting your most-used screens near the edge keeps them within thumb reach.</p>
+  </div>
+
+  <h3 id="settings-jog">Jog settings</h3>
+  <div class="card">
+    <table>
+      <tr><th>Item</th><th>Meaning</th></tr>
+      <tr><td>Haptics</td><td>Turns the vibration (click feel) on buttons and the dial on/off.</td></tr>
+      <tr><td>Frame-step sensitivity</td><td>The rotation needed to step once in Jog mode. <b>Smaller is more sensitive</b> (a small turn steps), larger is more deliberate.</td></tr>
+      <tr><td>Shuttle sensitivity</td><td>The angle needed to raise the speed one tier in Shuttle mode. Smaller means a small twist speeds up more.</td></tr>
+    </table>
+    <p class="dim">Frame-step accuracy varies by TV model and content. Find what feels good in your setup.</p>
+  </div>
+
+  <h3>Switch / reset / unpair</h3>
+  <div class="card">
+    <table>
+      <tr><th>Item</th><th>Description</th></tr>
+      <tr><td>Switch to another TV</td><td>Opens the connection screen. You can register and use several TVs.</td></tr>
+      <tr><td>Reset settings to defaults</td><td>Restores volume presets, jog settings, streaming choices, and tab order to their defaults. <b>Your pairing (the connection to the TV) is kept</b>, and language and developer mode are unchanged. There’s a confirmation dialog, so a stray tap is safe.</td></tr>
+      <tr><td>Unpair this TV</td><td>Deletes the saved credentials and the TV’s registration, and resets settings to defaults. Reconnecting requires PIN pairing again. Use it when you replace the TV or want a clean start.</td></tr>
+    </table>
+  </div>
+
+  <h3>Developer mode</h3>
+  <div class="card">
+    <p>Leave this off for normal use. When on, it shows the list of remote commands (IRCC codes) your TV supports and lets you send them with a tap to test. It’s for checking “does this button work on my TV?”</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="trouble">
+  <h2><svg class="ic-svg ic-h2"><use href="#ic-help"/></svg>Troubleshooting</h2>
+  <div class="card">
+    <table>
+      <tr><th>Symptom</th><th>What to check</th></tr>
+      <tr><td>The TV isn’t found</td><td>Confirm the iPhone and TV are on the same Wi-Fi. Check that “Local Network” is allowed under iPhone Settings → TV REMOTE for B. If still not found, add it by IP address manually.</td></tr>
+      <tr><td>Connection errors</td><td>Confirm “IP control” is enabled on the TV. Restarting the TV (unplug/replug) can also help.</td></tr>
+      <tr><td>Won’t power on from standby</td><td>Enable “Remote start” on the TV. Some Wi-Fi router settings can block the wake packet.</td></tr>
+      <tr><td>Some buttons don’t work</td><td>Remote commands vary by TV model and firmware. A few actions (such as slow playback) aren’t supported on some models.</td></tr>
+      <tr><td>“Back” needs two presses</td><td>In apps like YouTube, the first “Back” during playback only hides the on-screen controls. Press it again (that’s the TV app’s behaviour).</td></tr>
+      <tr><td>Volume presets don’t apply</td><td>Check the preset isn’t left as “Not set.” If the app launches slowly, increase “Delay before applying.”</td></tr>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  TV REMOTE for B — iPhone remote for Sony BRAVIA (Google TV)<br>
+  Minimum supported model: BRAVIA 4K VH21 / iOS 16 or later
+</footer>
+
+</body>
+</html>
