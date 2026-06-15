@@ -332,9 +332,9 @@
       <li>Keys: <code class="k">OK</code>, <code class="k">U</code> (up), <code class="k">D</code> (down), <code class="k">L</code> (left), <code class="k">R</code> (right), <code class="k">B</code> (back), home, menu, input, display, play, pause, stop, forward, rewind, next, prev, vol+, vol-, mute, ch+, ch- (Japanese names also work). Unknown tokens are ignored.</li>
     </ul>
     <p><b>Defaults (verified on BRAVIA VH21)</b></p>
-<pre class="macro">2× :     OK 0.6 R×8 OK 0.6 D×12 U×4 OK 0.6 D×12 OK 0.3 B×2
-Normal:  OK 0.6 R×8 OK 0.6 D×12 U×4 OK 0.6 D×12 U×4 OK 0.3 B×2</pre>
-    <p class="dim">Meaning: OK shows the player controls → R×8 to the gear → OK → <b>D×12 saturates to the bottom of the settings menu, then U×4 reaches “Speed”</b> → OK opens the speed list → for 2× <b>D×12 to the very bottom (=2×)</b>, for Normal <b>D×12 then U×4</b> → OK to confirm → B×2 to close. Counting from the bottom stays correct even when the menu length varies by video (the menus don’t wrap, so extra Downs just rest at the end; ×12 is a safe over-count). If it misbehaves, increase the waits or raise “Send interval” in Settings.</p>
+<pre class="macro">2× :     OK 0.6 R×8 OK 0.6 D×12 U×4 OK 0.6 D×12 OK 0.3 B×3
+Normal:  OK 0.6 R×8 OK 0.6 D×12 U×4 OK 0.6 D×12 U×4 OK 0.3 B×3</pre>
+    <p class="dim">Meaning: OK shows the player controls → R×8 to the gear → OK → <b>D×12 saturates to the bottom of the settings menu, then U×4 reaches “Speed”</b> → OK opens the speed list → for 2× <b>D×12 to the very bottom (=2×)</b>, for Normal <b>D×12 then U×4</b> → OK to confirm → B×3 to close. Counting from the bottom stays correct even when the menu length varies by video (the menus don’t wrap, so extra Downs just rest at the end; ×12 is a safe over-count). If it misbehaves, increase the waits or raise “Send interval” in Settings.</p>
   </div>
 
   <h4>Prompt for converting a loose description with a generative AI</h4>
@@ -353,14 +353,14 @@ Output only a single-line string of remote steps (no explanation, no preamble).
 # Guidelines
 - After an OK that opens a new menu/panel, add a 0.6 wait.
 - After an OK that confirms a selection, add about 0.3.
-- Use U/D/L/R for arrows and B for back. To close the menus afterward, end with "B×2".
+- Use U/D/L/R for arrows and B for back. To close the menus afterward, end with "B×3".
 - Output one line only.
 - If a menu's length varies, or its cursor doesn't open at a fixed spot, saturate
   to the bottom with many Downs (e.g. D×12) and count up with U (menus don't wrap).
 
 # Example
 Input: OK to open the menu, right 8 to settings, OK, go to the bottom and up 3 to speed, OK, go to the bottom of the speed list for 2x, OK, back twice
-Output: OK 0.6 R×8 OK 0.6 D×12 U×4 OK 0.6 D×12 OK 0.3 B×2
+Output: OK 0.6 R×8 OK 0.6 D×12 U×4 OK 0.6 D×12 OK 0.3 B×3
 
 # Instruction to convert
 {{your description}}</pre>
