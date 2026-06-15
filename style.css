@@ -129,6 +129,12 @@ h3 {
   color: var(--cyan);
 }
 
+h4 {
+  font-size: 0.98rem;
+  margin: 22px 0 8px;
+  color: var(--text);
+}
+
 p { margin: 0 0 14px; }
 
 .card {
@@ -323,6 +329,30 @@ h2 .ic-svg.ic-h2 {
   width: 17px;
   height: 17px;
   vertical-align: -3px;
+}
+
+/* ---- Code / macro blocks ---- */
+pre.macro {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 12px 0;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--text-dim);
+}
+code.k {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85em;
+  background: var(--cyan-dim);
+  color: var(--text);
+  border-radius: 5px;
+  padding: 1px 6px;
 }
 
 @media (max-width: 520px) {

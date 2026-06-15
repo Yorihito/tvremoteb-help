@@ -318,7 +318,50 @@
 
   <h3>Developer mode</h3>
   <div class="card">
-    <p>Leave this off for normal use. When on, it shows the list of remote commands (IRCC codes) your TV supports and lets you send them with a tap to test. It’s for checking “does this button work on my TV?”</p>
+    <p>Leave this off for normal use. When on, it shows the list of remote commands (IRCC codes) your TV supports and lets you send them with a tap to test. It’s for checking “does this button work on my TV?” It also hosts <b>Disable IPv6 (IPv4-only discovery)</b> and the <b>speed-macro editor</b> below.</p>
+  </div>
+
+  <h4>Editing the speed macros (YouTube)</h4>
+  <div class="card">
+    <p>The <span class="btn">2×</span> <span class="btn">Normal</span> buttons on the Media screen have no “set speed” command on the TV, so they replay a sequence of remote presses (OK, D-pad, …) to drive YouTube’s menus. You can edit that sequence as a <b>macro string</b> (editing is Developer-mode only; the buttons themselves work without Developer mode once you turn on Settings → Experimental → Speed macros). It’s experimental and the steps vary by YouTube version / TV model.</p>
+    <p><b>Syntax</b></p>
+    <ul>
+      <li>Separate steps with <b>spaces, commas, or arrows (→ / -&gt;)</b>.</li>
+      <li>Repeat with <code class="k">right×8</code> (<code class="k">x8</code> or <code class="k">*8</code> too).</li>
+      <li>A bare number is a wait in seconds: <code class="k">0.6</code> — put it where a menu needs time to open.</li>
+      <li>Keys: OK, Up, Down, Left, Right, Back, Home, Menu, Input, Display, Play, Pause, Stop, Forward, Rewind, Next, Prev, vol+, vol-, mute, ch+, ch- (Japanese names also work). Unknown tokens are ignored.</li>
+    </ul>
+    <p><b>Defaults (verified on BRAVIA VH21)</b></p>
+<pre class="macro">2× :     OK 0.6 right×8 OK 0.6 down×3 OK 0.6 down×4 OK 0.3 back×2
+Normal:  OK 0.6 right×8 OK 0.6 down×3 OK 0.6 OK 0.3 back×2</pre>
+    <p class="dim">Meaning: OK shows the player controls → right ×8 to the gear → OK → down ×3 to “Speed” → OK opens the speed list (cursor on Normal) → (for 2×, down ×4) → OK to confirm → Back ×2 to close the menus. If it misbehaves, increase the waits, adjust the counts for your TV, or raise “Send interval” in Settings.</p>
+  </div>
+
+  <h4>Prompt for converting a loose description with a generative AI</h4>
+  <div class="card">
+    <p>Copy the prompt below, replace <code class="k">{{your description}}</code> at the end with plain words like “OK to show the menu, right 8 times to settings, OK, down 3 times to speed, OK, down 4 times to 2×, OK, back twice,” and give it to ChatGPT / Claude, etc. It returns a one-line macro string to paste into the editor.</p>
+<pre class="macro">You generate YouTube speed-macro strings for the "TV REMOTE for B" app.
+Output only a single-line string of remote steps (no explanation, no preamble).
+
+# Grammar
+- List steps separated by spaces.
+- Repeat with "key×N" (e.g. right×8).
+- A bare number is a wait in seconds, e.g. 0.6. Put it where a menu opens.
+- Keys: OK, Up, Down, Left, Right, Back, Home, Menu, Input, Display,
+  Play, Pause, Stop, Forward, Rewind, Next, Prev, vol+, vol-, mute, ch+, ch-
+
+# Guidelines
+- After an OK that opens a new menu/panel, add a 0.6 wait.
+- After an OK that confirms a selection, add about 0.3.
+- To close the menus afterward, end with "back×2".
+- Output one line only.
+
+# Example
+Input: OK to open the menu, right 8 to settings, OK, down 3 to speed, OK, down 4 to 2x, OK, back twice
+Output: OK 0.6 right×8 OK 0.6 down×3 OK 0.6 down×4 OK 0.3 back×2
+
+# Instruction to convert
+{{your description}}</pre>
   </div>
 </section>
 
